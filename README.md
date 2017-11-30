@@ -1,4 +1,5 @@
 # Atomic Reactor Toolkit
+<img src="https://preview.ibb.co/kcaAQG/atomic_reactor.png" alt="atomic_reactor" border="0" />
 
 A framework for building atomic design systems.
 
