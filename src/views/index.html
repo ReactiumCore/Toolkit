@@ -1,5 +1,5 @@
 ---
-title         : Butter | Overview
+title      : Atomic Reactor Toolkit
 sidebar    : true
 ---
 
@@ -26,13 +26,13 @@ sidebar    : true
     <br />
     <h4><a id="Creating_an_Atom_13"></a>Creating an Atom</h4>
     <p>
-        Run the <a href="https://github.com/reykjavikingur/breakfast-butter/wiki/The-Butter-CLI">Butter-CLI</a>
+        Run the <a href="https://github.com/Atomic-Reactor/CLI">Atomic Reactor CLI</a>
         <kbd>create</kbd> command and follow the prompts.
     </p>
-    <pre><code class="language-sh">$ butter create atom</code></pre>
+    <pre><code class="language-sh">$ arcli kit:gen atom</code></pre>
 
     <p>Alternatively you can skip the prompts by specifying flags with the create command</p>
-    <pre><code class="language-sh">$ butter create atom --name button-primary --group button --dna btn-primary --style button-primary</code></pre>
+    <pre><code class="language-sh">$ arcli kit:gen atom --name button-primary --group button --dna btn-primary --style button-primary</code></pre>
 
     <p>When the command above executes three things will happen:</p>
     <ol>
@@ -65,10 +65,10 @@ sidebar    : true
     <br />
     <h4><a id="Creating_a_Molecule_33"></a>Creating a Molecule</h4>
     <p>
-        Using the <a href="https://github.com/reykjavikingur/breakfast-butter/wiki/The-Butter-CLI">Butter-CLI</a> to generate
+        Using the <a href="https://github.com/Atomic-Reactor/CLI">Atomic Reactor CLI</a> to generate
         a molecule is the same as creating an atom except use the ‘molecule’ keyword.
     </p>
-    <pre><code class="language-sh">$ butter create molecule</code></pre>
+    <pre><code class="language-sh">$ arcli kit:gen molecule</code></pre>
 </section>
 <section class="mt-5">
     <h3><a id="Organisms_39"></a>Organisms</h3>
@@ -79,10 +79,10 @@ sidebar    : true
     <br />
     <h4><a id="Creating_an_Organism_42"></a>Creating an Organism</h4>
     <p>
-        Using the <a href="https://github.com/reykjavikingur/breakfast-butter/wiki/The-Butter-CLI">Butter-CLI</a> to generate
+        Using the <a href="https://github.com/Atomic-Reactor/CLI">Atomic Reactor CLI</a> to generate
         an organism is the same as creating an atom or molecule except use the ‘organism’ keyword.
     </p>
-    <pre><code class="language-sh">$ butter create organism</code></pre>
+    <pre><code class="language-sh">$ arcli kit:gen organism</code></pre>
 </section>
 
 <section class="mt-5">
@@ -94,38 +94,9 @@ sidebar    : true
     <br />
     <h4><a id="Creating_a_Template_51"></a>Creating a Template</h4>
     <p>
-        Using the <a href="https://github.com/reykjavikingur/breakfast-butter/wiki/The-Butter-CLI">Butter-CLI</a> to create a
+        Using the <a href="https://github.com/Atomic-Reactor/CLI">Atomic Reactor CLI</a> to create a
         template is similar to creating an atom, molecule, or organism except use the ‘template’ keyword and don’t worry
         about setting the <em>group</em> as all templates will be grouped under the ‘Templates’ section of the menu.
     </p>
-    <pre><code class="language-sh">$ butter create template</code></pre>
-</section>
-<section class="mt-5">
-    <h3><a id="Pages_57"></a>Pages</h3>
-    <p>
-        Pages are specific instances of templates that show what a UI looks like with real representative content in
-        place.
-    </p>
-    <p>
-        In addition to demonstrating the final interface as your users will see it, pages are essential for testing the
-        effectiveness of the underlying design system. It is at the page stage that we’re able to take a look at how all
-        those patterns hold up when real content is applied to the design system. Does everything look great and function as
-        it should? If the answer is no, then we can loop back and modify our molecules, organisms, and templates to better
-        address our content’s needs.
-    </p>
-    <p>
-        Butter does not have a mechanism for displaying pages as we have found that having content in the toolkit leads to a
-        host of problems with delivering the toolkit as living documentation. Instead, we’ve created a means to add links to
-        the Butter menu which can lead to actual pages where a template is being used.
-    </p>
-    <br />
-    <h4><a id="Creating_a_Page_Link_64"></a>Creating a Page Link</h4>
-    <p>
-        Run the <a href="https://github.com/reykjavikingur/breakfast-butter/wiki/The-Butter-CLI">Butter-CLI</a>
-        <kbd>page</kbd> command and follow the prompts:
-    </p>
-    <pre><code class="language-sh">$ butter page</code></pre>
-
-    <p>Alternatively you can skip the prompts by specifing the <kbd>--label</kbd> and <kbd>--url</kbd> flags:</p>
-    <pre><code class="language-sh">$ butter page --label Home Page" --url "http://www.mysite.com/index.html"</code></pre>
+    <pre><code class="language-sh">$ arcli kit:gen template</code></pre>
 </section>

@@ -32,19 +32,6 @@ Into this:
 </html>
 ```
 
-## Usage
-
-The task returns a promise, so it can be used in an async task runner, like Gulp:
-
-```js
-var assemble = require('butter-assemble');
-var gulp = require('gulp');
-
-gulp.task('assemble', function () {
-	return assemble(options);
-});
-```
-
 The task accepts options, but assumes this directory structure:
 
 ```
@@ -154,7 +141,6 @@ assemble({
 ```
 
 ```
-<!-- formerly `{{#each materials}}` -->
 {{#each patterns}}
 
 	<h1>{{name}}</h1>

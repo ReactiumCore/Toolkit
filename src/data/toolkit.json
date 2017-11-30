@@ -1,13 +1,13 @@
 {
   "colors"       : 20,
-  "menu"         : "right",
-  "name"         : "Butter",
+  "menu"         : "left",
+  "name"         : "Toolkit",
   "version"      : "1.0.24",
   "fullscreen"   : "off",
   "sticky"       : "off",
-  "icolor"       : "#00b29f",
+  "icolor"       : "#4f82ba",
   "branding": {
     "logo": false,
-    "title": "Butter"
+    "title": "Atomic Reactor Toolkit"
   }
 }
