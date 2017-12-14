@@ -60,3 +60,6 @@ typings/
 
 # ignore dynamically created dist directory
 dist
+
+# WebStorm IDE settings
+.idea
