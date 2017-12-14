@@ -103,6 +103,6 @@
   ],
   "dest": "dist",
   "src": "src",
-  "zip": "breakfast-butter.zip",
+  "zip": "atomic-reactor-toolkit.zip",
   "hooks": {}
 }
