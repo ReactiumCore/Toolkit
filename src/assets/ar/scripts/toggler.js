@@ -3,6 +3,8 @@ const _          = require('underscore');
 const config     = require('../../../data/toolkit.json');
 const slugify    = require('slugify');
 
+var $ = jQuery;
+
 /**
  * -----------------------------------------------------------------------------
  * Constructor
@@ -61,7 +63,7 @@ toggler.toggle = function (id, state) {
 toggler.expand = function () {
     let prefix    = slugify(config.name.toLowerCase());
     let exp       = window.localStorage.getItem(prefix + '-expanded');
-    exp           = (typeof exp !== 'undefined') ? JSON.parse(exp) : [];
+    exp           = (typeof exp !== 'undefined' && exp !== null) ? JSON.parse(exp) : [];
     let inter     = _.intersection(toggler.controls, exp);
 
     $('.f-global-control').removeClass('f-active');
