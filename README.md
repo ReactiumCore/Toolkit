@@ -33,3 +33,17 @@ The Toolkit should now be running in your browser and watching for changes to pr
 `http://localhost:3000`
 
 > Head over to the [docs](https://github.com/Atomic-Reactor/CLI) for a deeper dive
+
+
+## Including Third-Party Dependencies
+You can include third-party libraries (such as Bootstrap) as follows:
+
+* Install with NPM
+    * Example: `npm install --save underscore`
+    * Example: `npm install --save bootstrap`
+* If it has JS definitions, open [webpack.config.js](webpack.config.js) and add a key-value pair to the `ProvidePlugin` configuration object.
+    * For example: `'_' : 'underscore'`
+* If it has SCSS definitions, import it in [src/assets/toolkit/styles/libs.scss](src/assets/toolkit/styles/libs.scss)
+    * For example: `@import 'bootstrap/scss/bootstrap';`
+* If it has SCSS configurations, create or edit [src/assets/toolkit/styles/themes/default/_variables.scss](src/assets/toolkit/styles/themes/default/_variables.scss)
+
