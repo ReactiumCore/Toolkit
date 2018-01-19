@@ -151,7 +151,7 @@ gulp.task('styles:toolkit', () => {
 });
 
 gulp.task('styles:lint', [], function () {
-    return gulp.src(config.styles.toolkit.src)
+    return gulp.src(config.styles.toolkit.watch)
         .pipe(sassLint({
             configFile: './sass-lint-config.yml'
         }))
