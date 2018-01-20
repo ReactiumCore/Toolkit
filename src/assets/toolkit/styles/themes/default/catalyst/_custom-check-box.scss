@@ -1,69 +1,70 @@
 // INPUT CHECKBOX
 .checkbox {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  padding: 4px;
+  position: relative;
+
+  &:focus {
+    box-shadow: inset 0 0 0 1px $black;
+    outline: none;
+  }
+
+  input {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    flex-grow: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    &:checked,
+    &[selected = 'true'] {
+      ~ .checkbox__box {
+        @include icon;
+        text-align: center;
+
+        &::after {
+          bottom: 2px;
+          content: '\e934';
+          font-size: 16px;
+          left: 2px;
+          position: absolute;
+        }
+      }
+    }
+  }
+
+  &__box {
+    background: transparent;
+    border: 1px solid $black;
+    display: inline-block;
+    height: 20px;
+    margin-right: 6px;
+    outline: none;
     position: relative;
-    padding: 4px;
+    width: 20px;
 
-    &:focus {
-        box-shadow: inset 0px 0px 0px 1px $black;
-        -webkit-box-shadow: inset 0px 0px 0px 1px $black;
-        -moz-box-shadow: inset 0px 0px 0px 1px $black;
-        outline: none;
+    &--disabled {
+      opacity: .4;
     }
+  }
 
-    input {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-        flex-grow: 0;
+  &__text {
+    align-self: center;
+    display: flex;
+    flex-shrink: 1000;
+    flex-wrap: wrap;
+    line-height: 1.4;
+    outline: none;
 
-        &:checked,&[selected = "true"] {
-            ~ .checkbox__box {
-                text-align: center;
-                @include icon;
-                &:after {
-                    content: '\e934';
-                    font-size: 16px;
-                    position: absolute;
-                    left:2px;
-                    bottom: 2px;
-                }
-            }
-        }
+
+    &--disabled {
+      color: $gray;
     }
-
-    &__box {
-        position: relative;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border: 1px solid $black;
-        margin-right: 6px;
-        background: transparent;
-        outline: none;
-
-        &--disabled {
-            opacity: 0.4;
-        }
-    }
-
-    &__text {
-        flex-shrink: 1000;
-        display: flex;
-        align-self: center;
-        line-height: 1.4;
-        outline: none;
-        flex-wrap: wrap;
-
-        &--disabled {
-            color: $gray;
-        }
-    }
+  }
 }
