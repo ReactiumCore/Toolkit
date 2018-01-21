@@ -11,59 +11,7 @@
             color: $dark-blue;
             display: flex;
             justify-content: flex-start;
-            
             position: relative;
-            
-            input {
-                border: 0;
-                clip: rect(0, 0, 0, 0);
-                flex-grow: 0;
-                height: 1px;
-                margin: -1px;
-                overflow: hidden;
-                padding: 0;
-                position: absolute;
-                width: 1px;
-                
-                &:checked {
-                    ~ .radio__circle {
-                        background-color: $black;
-                        border-color: $gray;
-                        box-shadow: 0 0 0 4px $white inset;
-                    }
-                    
-                    ~ .radio__text {
-                        outline: none;
-                        text-decoration: none;
-                    }
-                }
-                
-                &:disabled {
-                    ~ .focus-state {
-                        display: none;
-                    }
-                    
-                    ~ * {
-                        opacity: .5;
-                        outline: none;
-                    }
-                }
-            }
-            
-            .focus-state {
-                box-sizing: content-box;
-                display: inline;
-                position: absolute;
-                
-                &:focus {
-                    border: .3125rem solid transparent;
-                    height: 100%;
-                    left: -.3125rem;
-                    outline: .0625rem solid $black;
-                    top: -.3125rem;
-                    width: 100%;
-                }
-            }
             
             &__circle {
                 border: 1px solid $gray;
@@ -99,6 +47,58 @@
                     
                     text-decoration: underline;
                 }
+            }
+        }
+
+
+        .radio-input {
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            flex-grow: 0;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+
+            &:checked {
+                ~ .radio__circle {
+                    background-color: $black;
+                    border-color: $gray;
+                    box-shadow: 0 0 0 4px $white inset;
+                }
+
+                ~ .radio__text {
+                    outline: none;
+                    text-decoration: none;
+                }
+            }
+
+            &:disabled {
+                ~ .focus-state {
+                    display: none;
+                }
+
+                ~ * {
+                    opacity: .5;
+                    outline: none;
+                }
+            }
+        }
+
+        .radio-focus-state {
+            box-sizing: content-box;
+            display: inline;
+            position: absolute;
+
+            &:focus {
+                border: .3125rem solid transparent;
+                height: 100%;
+                left: -.3125rem;
+                outline: .0625rem solid $black;
+                top: -.3125rem;
+                width: 100%;
             }
         }
     }
