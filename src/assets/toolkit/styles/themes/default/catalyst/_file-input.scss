@@ -1,41 +1,40 @@
 .file-input-wrapper {
-  position: relative;
-
-  input {
-
-    height: .1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    width: .1px;
-    z-index: -1;
-
-    + label {
-      background-color: $red;
-      color: $light-greyish-red;
-      cursor: pointer;
-      display: inline-block;
-      font-size: 1em;
-      padding: .625rem 1.25rem;
-      position: relative;
-
-
-      &:hover {
-        background-color: $dark-pink;
-      }
-
-      .icon {
-        font-size: 18px;
-        font-weight: 800;
-        margin-right: 10px;
-      }
+    position: relative;
+    
+    input {
+        
+        height: .1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        width: .1px;
+        z-index: -1;
+        
+        + label {
+            background-color: $red;
+            color: $light-greyish-red;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 1em;
+            padding: .625rem 1.25rem;
+            position: relative;
+            
+            &:hover {
+                background-color: $dark-pink;
+            }
+            
+            .icon {
+                font-size: 18px;
+                font-weight: 800;
+                margin-right: 10px;
+            }
+        }
+        
+        &:focus {
+            + label {
+                background-color: $dark-pink;
+                outline: 1px dotted $black;
+            }
+        }
     }
-
-    &:focus {
-      + label {
-        background-color: $dark-pink;
-        outline: 1px dotted $black;
-      }
-    }
-  }
 }

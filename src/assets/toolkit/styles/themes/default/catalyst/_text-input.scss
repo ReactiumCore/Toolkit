@@ -1,52 +1,50 @@
 .input-wrapper {
-  border: 0;
-  height: auto;
-  padding: 0;
-  position: relative;
-  width: 100%;
-
-
-  &__text-input {
-    border: 1px solid $gray;
-    box-sizing: border-box;
-    height: 50px;
-    padding: 15px 25px;
+    border: 0;
+    height: auto;
+    padding: 0;
+    position: relative;
     width: 100%;
-
-    &:focus,
-    &:active,
-    &:visited {
-      border: 1px solid $black;
-      outline: none;
-      padding-bottom: 10px;
-      padding-top: 20px;
-
-
-      ~ label {
-        top: 14px;
-        transition: all .2s linear;
-      }
+    
+    &__text-input {
+        border: 1px solid $gray;
+        box-sizing: border-box;
+        height: 50px;
+        padding: 15px 25px;
+        width: 100%;
+        
+        &:focus,
+        &:active,
+        &:visited {
+            border: 1px solid $black;
+            outline: none;
+            padding-bottom: 10px;
+            padding-top: 20px;
+            
+            ~ label {
+                top: 14px;
+                transition: all .2s linear;
+            }
+        }
     }
-  }
-
-  &__label {
-    font-size: 14px;
-    left: 25px;
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &.filled {
-    label {
-      color: $gray-dark;
-      top: 14px;
+    
+    &__label {
+        font-size: 14px;
+        left: 25px;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
     }
-
-    input {
-      padding-bottom: 10px;
-      padding-top: 20px;
+    
+    &.filled {
+        label {
+            color: $gray-dark;
+            top: 14px;
+        }
+        
+        input {
+            padding-bottom: 10px;
+            padding-top: 20px;
+        }
     }
-  }
 }
