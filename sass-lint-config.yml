@@ -51,7 +51,12 @@ rules:
   force-pseudo-nesting: 1
 
   # Name Formats
-  class-name-format: 1
+  class-name-format:
+  - 1
+  -
+    allow-leading-underscore: false
+    convention: hyphenatedbem
+    convention-explanation: 'Hyphenated BEM'
   function-name-format: 1
   id-name-format: 0
   mixin-name-format: 1
