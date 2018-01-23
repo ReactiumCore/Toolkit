@@ -12,7 +12,7 @@ rules:
   mixins-before-declarations: 1
 
   # Line Spacing
-  one-declaration-per-line: 1
+  one-declaration-per-line: 0
   empty-line-between-blocks: 0
   single-line-per-selector: 1
 
@@ -22,18 +22,18 @@ rules:
   no-color-keywords: 1
   no-color-literals: 1
   no-combinators: 0
-  no-css-comments: 1
+  no-css-comments: 0
   no-debug: 1
   no-disallowed-properties: 0
   no-duplicate-properties: 1
   no-empty-rulesets: 1
   no-extends: 0
-  no-ids: 1
-  no-important: 1
+  no-ids: 0
+  no-important: 0
   no-invalid-hex: 1
   no-mergeable-selectors: 1
   no-misspelled-properties: 1
-  no-qualifying-elements: 1
+  no-qualifying-elements: 0
   no-trailing-whitespace: 0
   no-trailing-zero: 1
   no-transition-all: 1
@@ -70,8 +70,8 @@ rules:
   brace-style: 1
   clean-import-paths: 1
   empty-args: 1
-  hex-length: 1
-  hex-notation: 1
+  hex-length: 0
+  hex-notation: 0
   indentation:
   - 1
   - size: 4
@@ -82,9 +82,9 @@ rules:
   - 1
   -
     max-depth: 3
-  property-sort-order: 1
+  property-sort-order: 0
   pseudo-element: 1
-  quotes: 1
+  quotes: 0
   shorthand-values: 1
   url-quotes: 1
   variable-for-property: 1
@@ -92,14 +92,14 @@ rules:
 
   # Inner Spacing
   space-after-comma: 1
-  space-before-colon: 1
+  space-before-colon: 0
   space-after-colon: 1
   space-before-brace: 1
   space-before-bang: 1
-  space-after-bang: 1
+  space-after-bang: 0
   space-between-parens: 1
   space-around-operator: 1
 
   # Final Items
   trailing-semicolon: 1
-  final-newline: 1
+  final-newline: 0
