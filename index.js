@@ -8,13 +8,13 @@ const app        = express();
 const config     = require(__dirname + '/gulp.config.json');
 
 let port    = config.port.proxy;
-port        = (process.env.hasOwnProperty('port')) ? process.env.port : port;
+port        = (process.env.hasOwnProperty('port')) ? process.env.APP_PORT : port;
 
 // Use basic auth if .htpasswd file is present
 if (fs.existsSync(__dirname + '/.htpasswd')) {
     let auth     = require('http-auth');
     let basic    = auth.basic({
-        realm    : "Butter.",
+        realm    : "Atomic Reactor Toolkit.",
         file     : __dirname + "/.htpasswd"
     });
 

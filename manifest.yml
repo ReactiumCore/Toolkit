@@ -1,0 +1,9 @@
+applications:
+- name: ar-toolkit
+  command: npm start
+  disk_quota: 1G
+  instances: 1
+  memory: 256M
+  routes:
+  - route: ar-toolkit.mybluemix.net
+  stack: cflinuxfs2
