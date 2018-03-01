@@ -8,7 +8,7 @@ const app        = express();
 const config     = require(__dirname + '/gulp.config.json');
 
 let port    = config.port.proxy;
-port        = (process.env.hasOwnProperty('port')) ? process.env.APP_PORT : port;
+port        = 'APP_PORT' in process.env ? process.env.APP_PORT : port;
 
 // Use basic auth if .htpasswd file is present
 if (fs.existsSync(__dirname + '/.htpasswd')) {
