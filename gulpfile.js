@@ -130,7 +130,7 @@ gulp.task('styles:ar', () => {
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(prefix('last 1 version'))
-		.pipe(gulpif(!config.dev, csso()))
+		.pipe(csso({restructure: false}))
 		.pipe(rename('ar.css'))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(config.styles.ar.dest))
@@ -144,7 +144,7 @@ gulp.task('styles:toolkit', () => {
 			includePaths: ['./node_modules'],
 		}).on('error', sass.logError))
 		.pipe(prefix('last 1 version'))
-		.pipe(gulpif(!config.dev, csso()))
+		.pipe(csso({restructure: false}))
 		.pipe(gulpif(config.dev, sourcemaps.write()))
 		.pipe(gulp.dest(config.styles.toolkit.dest))
 		.pipe(gulpif(config.dev, reload({stream: true})));
