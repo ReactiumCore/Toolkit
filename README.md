@@ -1,4 +1,7 @@
 # Atomic Reactor Toolkit
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Atomic-Reactor/Toolkit.svg)](https://greenkeeper.io/)
+
 <img src="https://preview.ibb.co/kcaAQG/atomic_reactor.png" alt="atomic_reactor" border="0" style="width: 100%; height: auto;" />
 
 A framework for building atomic design systems.
